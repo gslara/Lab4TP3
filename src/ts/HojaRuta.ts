@@ -1,5 +1,5 @@
-import { Vehiculo } from './Vehiculo';
-import { Detalle } from './Detalle';
+import { Vehiculo } from './Vehiculo.js';
+import { Detalle } from './Detalle.js';
 
 export class HojaRuta {
     fecha: Date;

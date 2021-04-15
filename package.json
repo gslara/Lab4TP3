@@ -1,18 +1,22 @@
 {
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "start": "ts-node index.ts",
-        "build": "tsc"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "nodemon": "^2.0.7",
-        "ts-node": "^9.1.1",
-        "typescript": "^4.2.4"
-    }
+  "name": "labo4-tp3",
+  "version": "1.0.0",
+  "description": "* npm(https://nodejs.org/es/download/) * npm install -g typescript",
+  "type": "module",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "webpack": "^5.33.2"
+  }
 }

@@ -1,6 +1,3 @@
-"use strict";
-exports.__esModule = true;
-exports.HojaRuta = void 0;
 var HojaRuta = /** @class */ (function () {
     function HojaRuta() {
         this.fecha = new Date();
@@ -18,4 +15,4 @@ var HojaRuta = /** @class */ (function () {
     };
     return HojaRuta;
 }());
-exports.HojaRuta = HojaRuta;
+export { HojaRuta };
