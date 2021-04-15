@@ -1,4 +1,4 @@
-import { HojaRuta } from "./HojaRuta";
+import { HojaRuta } from "./HojaRuta.js";
 
 export class Vehiculo{
     patente: string;

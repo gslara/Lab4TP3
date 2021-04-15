@@ -1,6 +1,3 @@
-"use strict";
-exports.__esModule = true;
-exports.Vehiculo = void 0;
 var Vehiculo = /** @class */ (function () {
     function Vehiculo() {
         this.patente = "";
@@ -20,4 +17,4 @@ var Vehiculo = /** @class */ (function () {
     };
     return Vehiculo;
 }());
-exports.Vehiculo = Vehiculo;
+export { Vehiculo };
