@@ -6,17 +6,9 @@ export class TestA {
     //Declaramos las variables
     vehiculo: Vehiculo;
     hojaRuta1; hojaRuta2; hojaRuta3: HojaRuta;
-    //hojaRuta2: HojaRuta;
-    //hojaRuta3: HojaRuta;
-    detalle1A: Detalle;
-    detalle1B: Detalle;
-    detalle1C: Detalle;
-    detalle2A: Detalle;
-    detalle2B: Detalle;
-    detalle2C: Detalle;
-    detalle3A: Detalle;
-    detalle3B: Detalle;
-    detalle3C: Detalle;
+    detalle1A; detalle1B; detalle1C: Detalle;
+    detalle2A; detalle2B; detalle2C: Detalle;
+    detalle3A; detalle3B; detalle3C: Detalle;
 
     constructor() {
         //Inicializamos las variables
