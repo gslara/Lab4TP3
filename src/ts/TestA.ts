@@ -1,6 +1,7 @@
-import { HojaRuta } from './HojaRuta';
-import { Detalle } from './Detalle';
-import { Vehiculo } from './Vehiculo';
+console.log("parteA")
+import { HojaRuta } from './HojaRuta.js';
+import { Detalle } from './Detalle.js';
+import { Vehiculo } from './Vehiculo.js';
 
 export class TestA {
     //Declaramos las variables
