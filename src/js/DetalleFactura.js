@@ -2,10 +2,10 @@ var DetalleFactura = /** @class */ (function () {
     function DetalleFactura(cantidad, articulo) {
         this.cantidad = cantidad;
         this.articulo = articulo;
-        this.subtotal = 0;
     }
     DetalleFactura.prototype.calcularSubTotal = function () {
-        return this.subtotal = Number(this.cantidad) * Number(this.articulo.precio);
+        this.subtotal = Number(this.cantidad) * Number(this.articulo.precio);
+        return this.subtotal;
     };
     return DetalleFactura;
 }());

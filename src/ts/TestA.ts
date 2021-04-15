@@ -152,16 +152,27 @@ export class TestA {
 
 
     probarMetodos() {
+        let divA = document.getElementById('parteA');
+        divA.childNodes.item(0).textContent = "Parte A";
+
+        //Punto 1
         let totalKmH1 = this.hojaRuta1.calcularTotalKm();
-        console.log("El total de km de la hoja de ruta 1 es " + totalKmH1 + " km.")
-    
+        let puntoA1 = divA.childNodes.item(1);
+            puntoA1.textContent = `1) Total de kilometros por hoja de ruta 1`;
+                let puntoA1_ul = puntoA1.appendChild(document.createElement('ul'));
+                let puntoA1_li = puntoA1_ul.appendChild(document.createElement('li'));
+                puntoA1_li.textContent = `${totalKmH1} km.`;
         let fechaDesde = new Date("2021-03-13");
         let fechaHasta = new Date("2021-03-17");
         let totalKmVehiculo = this.vehiculo.calcularTotalKmRecorridos(fechaDesde, fechaHasta);
-        console.log("El total de km recorridos por el vehículo " + this.vehiculo.marca + " " + this.vehiculo.modelo + " de patente " + this.vehiculo.patente +
-        " entre los días " + fechaDesde.toDateString() + " y " + fechaHasta.toDateString() + " es " + totalKmVehiculo + " km.");
+        //Punto 2
+            let puntoA2 = divA.childNodes.item(3);
+            puntoA2.textContent = "El total de km recorridos por el vehículo";
+                let puntoA2_ul = puntoA2.appendChild(document.createElement('ul'))
+                let puntoA2_li = puntoA2_ul.appendChild(document.createElement('li'));
+                puntoA2_li.textContent = `${this.vehiculo.marca} ${this.vehiculo.modelo} de patente ${this.vehiculo.patente}
+                entre los días ${fechaDesde.toDateString()} y ${fechaHasta.toDateString()} es ${totalKmVehiculo} km.`;
     }
-
 }
 
 let prueba = new TestA();

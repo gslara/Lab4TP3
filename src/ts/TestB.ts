@@ -52,7 +52,47 @@ export class TestB{
         this.inicializarArticulos();
         this.inicializarFacturas();
         this.inicializarDetalleFacturas();
-        this.cliente.totalFacturadoXTipoPago("E");
     }
 }
 let pruebaB = new TestB();
+
+let divB = document.getElementById('parteB');
+divB.childNodes.item(0).textContent = "Parte B";
+//Punto 1
+    let puntoB1 = divB.childNodes.item(1);
+    puntoB1.textContent = "1) SubTotal de cada factura";
+    let ulB1 = puntoB1.appendChild(document.createElement('ul'));
+
+    pruebaB.cliente.facturas.forEach(
+        f =>{
+            let li1 = ulB1.appendChild(document.createElement('li'));
+            li1.textContent = `Factura ${f.numero}`;
+            let ul_li1 = li1.appendChild(document.createElement('ul'));
+            f.detallesFactura.forEach(dF =>{
+                let sub_li = ul_li1.appendChild(document.createElement('li'));
+                sub_li.textContent = `${dF.articulo.denominacion} - ${dF.articulo.precio}$ x ${dF.cantidad} = ${dF.calcularSubTotal()}`;
+            });
+        }
+    );
+//Punto 2
+    let puntoB2 = divB.childNodes.item(3);
+    puntoB2.textContent = "2) Total de items";
+    let ulB2 = puntoB2.appendChild(document.createElement('ul'));
+        pruebaB.cliente.facturas.forEach(
+            f =>{
+                let li = ulB2.appendChild(document.createElement('li'));
+                li.textContent = `Factura ${f.numero} - Total: ${f.calcularTotalItems()}`;
+            }
+        );
+//Punto 3
+    let puntoB3 = divB.childNodes.item(5);
+    puntoB3.textContent = `3) Calcular total final por cada factura`;
+        let ulB3 = puntoB3.appendChild(document.createElement("ul"));
+        pruebaB.cliente.facturas.forEach(
+            f => {
+                let li = ulB3.appendChild(document.createElement('li'));
+                li.textContent = `Factura ${f.numero} -> Recargo ${f.recargo}% Total ${f.calcularTotalFinal().toString()}`;
+            }
+        );
+//Punto 4
+let puntoB4 = divB.childNodes.item(7).textContent = `4) Total facturado por tipo de pago: ${pruebaB.cliente.totalFacturadoXTipoPago('E')}`;

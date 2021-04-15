@@ -10,11 +10,11 @@ export class DetalleFactura{
     constructor(cantidad : Number, articulo : Articulo){
         this.cantidad = cantidad;
         this.articulo = articulo
-        this.subtotal = 0;
     }
 
     calcularSubTotal() : Number{
-        return this.subtotal = Number(this.cantidad) * Number(this.articulo.precio);
+        this.subtotal = Number(this.cantidad) * Number(this.articulo.precio);
+        return this.subtotal;
     }
     
 }

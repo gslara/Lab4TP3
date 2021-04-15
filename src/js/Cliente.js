@@ -10,7 +10,6 @@ var Cliente = /** @class */ (function () {
         this.facturas.forEach(function (factura) {
             if (factura.tipoPago.validar() || tipoPago == factura.tipoPago.seleccionado) {
                 totalFacturado += Number(factura.calcularTotalFinal());
-                console.log(totalFacturado);
             }
         });
         return totalFacturado;
